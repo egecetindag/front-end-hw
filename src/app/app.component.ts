@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title:string = 'front-end-homework';
+  title: string = 'front-end-homework';
+  loginModal: boolean = false;
+ 
 }

@@ -36,11 +36,15 @@ header{
             padding: 0;
             li{
                 margin-bottom: 40px;
-                a{
+                
+                a, .btn-transparent{
+                    font-family: 'Inter',sans-serif;
                     font-weight: 500;
                     color: @text-grey;
                     margin-right: 25px;
                     transition: color 0.2s;
+                    font-size: 0.9rem;
+                    padding:0;
                     &:hover{
                         color: @text-grey-hover; 
                         transition: color 0.2s;
@@ -118,7 +122,7 @@ header{
                
            }
         }
-        button.btn-transparent{
+        button.toggle{
             display: none;
         }
     }

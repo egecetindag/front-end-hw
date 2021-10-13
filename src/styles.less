@@ -24,6 +24,9 @@ h3{
     color:#7f7f7f;
     font-size: 0.85rem;
 }
+button{
+ cursor: pointer;
+}
 button.btn-transparent{
     background: transparent;
     border: none;
@@ -38,6 +41,13 @@ select{
     &:focus, &:focus-visible{
         outline: none;
     }
+}
+app-modal{
+    transition: all .2s;
+    visibility: hidden;
+}
+body.modal-open{
+    overflow: hidden;
 }
 a{
     cursor: pointer;

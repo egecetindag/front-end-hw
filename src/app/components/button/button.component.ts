@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output  } from '@angular/core';
-// import * as EventEmitter from 'events';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+
 
 @Component({
   selector: 'app-button',
@@ -9,13 +9,13 @@ import { Component, OnInit, Input, Output  } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() text: string ='';
   @Input() width: string ='';
-  // @Output() btnClick = new EventEmitter();
+  @Output() btnClick = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
   onClick(){
-    // this.btnClick.emit();
+    this.btnClick.emit();
   }
 
 }

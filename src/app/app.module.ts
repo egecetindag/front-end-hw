@@ -11,7 +11,8 @@ import { AdvantageItemComponent } from './components/advantage-item/advantage-it
 import {AccountComponent} from './components/account/account.component'
 import {FooterComponent} from './components/footer/footer.component';
 import {StoreButtonComponent} from './components/store-button/store-button.component';
-
+import {SigninComponent} from './components/signin/signin.component';
+import {ModalComponent} from './components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import {StoreButtonComponent} from './components/store-button/store-button.compo
     AdvantageItemComponent,
     AccountComponent,
     FooterComponent,
-    StoreButtonComponent
+    StoreButtonComponent,
+    SigninComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,0 +1,24 @@
+<div class="signin">
+    <div class="tabs">
+        <button (click)="activateBtn(1)"
+            [ngClass]="{'active': activeBtn==1, 'tab-btn':true,'btn-transparent':true }">Phone Number</button>
+        <button (click)="activateBtn(2)"
+            [ngClass]="{'active': activeBtn==2, 'tab-btn':true, 'btn-transparent':true }">UserID or E-mail</button>
+    </div>
+    <div class="inputs">
+        <input placeholder="UserID or Email">
+        <input placeholder="Password">
+    </div>
+    <div class="buttons">
+        <button class="login-btn signin-btn">
+            LOGIN
+        </button>
+        <button class="qr-btn signin-btn">
+            <span class="material-icons-outlined">
+                qr_code_2
+            </span>
+            LOGIN WITH QR CODE
+
+        </button>
+    </div>
+</div>

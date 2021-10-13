@@ -1,0 +1,87 @@
+@text-blue:#4a84ef;
+@text-blue-hover:#3374ed;
+@text-blue-shadow:#4984ef50;
+@text-grey-light: #94949450;
+@text-grey: #949494;
+@title-dark-grey:#3f3f40;
+@title-dark-grey-hover:#272727;
+.signin{
+    min-width: 350px;
+    min-height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    .tabs{
+        border-bottom: 1px solid @text-grey-light;
+        .tab-btn{
+            width: 40%;
+            padding: 20px;
+            color: @text-grey;
+            &.active{
+                border-bottom: 2px solid @text-blue;
+                color: @title-dark-grey;
+            }
+        }
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0px;
+        input{
+            &::placeholder{
+                color: @text-grey-light;
+                padding-left: 20px;
+            }
+            border: 1px solid @text-grey-light;
+            outline: none;
+            height: 40px;
+            line-height: 40px;
+            &:active, &:focus{
+                box-shadow: 0px 0px 5px @text-blue-shadow;
+                border: 1px solid @text-blue-shadow;
+            }
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        button.signin-btn{
+            border: none;
+            border-radius: 25px;
+            height: 50px;  
+            color: white;
+           
+            &.login-btn{
+                background-color: @text-blue;
+                transition: all .2s;
+                &:hover{
+                    background-color: @text-blue-hover;
+                    transition: all .2s;
+                }
+            }
+            &.qr-btn{
+                &::after {
+                    flex: 1;
+                    content: '';
+                  }
+                  
+                &:hover{
+                    background-color: @title-dark-grey-hover;
+                    transition: all .2s;
+                }
+                transition: all .2s;
+                display: flex;
+                align-items: center;
+                background-color:@title-dark-grey;
+                justify-content: center;
+                
+                .material-icons-outlined{
+                    flex:1
+                }
+            }
+        }
+    }
+}

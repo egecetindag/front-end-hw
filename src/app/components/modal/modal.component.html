@@ -1,0 +1,15 @@
+<div class="modal">
+    <div class="modal-bg"></div>
+    <div class="modal-inside">
+        <div class="modal-header">
+            <div class="empty-div"></div>
+            <div>{{title}}</div>
+            <button (click)="close()" class="btn-transparent">
+                <span class="material-icons-outlined">
+                cancel
+                </span>
+            </button>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</div>
