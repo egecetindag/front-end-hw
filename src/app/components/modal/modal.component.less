@@ -13,12 +13,16 @@
     }
     .modal-inside{
         z-index: 1000; 
-        left: 50%;
+        width: calc(100% - 30px);
+        left: 15px;
+        right: 15px;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
         background-color: white;
         border-radius: 5px;
         position: fixed;
+
+
         .empty-div{
             width: 36px;
         }
@@ -40,5 +44,16 @@
                 }
             }
         }
+    }
+}
+@media (min-width: 450px) { 
+    .modal{
+       .modal-inside{
+        left: 50%;
+        top: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+        width: auto;
+       }
     }
 }
