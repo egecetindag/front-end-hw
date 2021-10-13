@@ -1,0 +1,28 @@
+<header>
+    <img src="assets/images/logo.svg" />
+    <nav [ngClass]="{'active': menuOpen, 'mobile-nav':true }">
+        <ul class="no-bullets">
+            <li><a href="/">BUSINESS</a></li>
+            <li><a href="/">CARD</a></li>
+            <li><a href="/">SECURITY</a></li>
+            <li><a href="/">SIGN UP</a></li>
+            <li><a href="/">SIGN IN</a></li>
+        </ul>
+        <div class="language-wrapper">
+            <span class="material-icons-outlined">
+                language
+            </span>
+            <select>
+                <option value="en">EN</option>
+                <option value="en">TR</option>
+            </select>
+        </div>
+        
+    </nav>
+    <button (click)="changeMenuOpen()" [ngClass]="{'btn-transparent':true, 'toggle': true, 'active': menuOpen }">
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+</header>

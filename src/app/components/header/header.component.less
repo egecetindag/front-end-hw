@@ -1,0 +1,119 @@
+
+@text-grey: #949494;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom:1px solid rgba(183,198,225,.43);
+    max-width: 1210px;
+    margin: auto;
+    background-color: white;
+    nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        padding: 50px;
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased; //stop flickering
+        transform-origin: 0% 0%;
+        transform: translate(100%,-25px);
+        transition: transform 0.5s ease-in;
+        .language-wrapper{
+            display: flex;
+            align-items: center;
+            .material-icons-outlined{
+                color: @text-grey;
+            }
+        }
+        &.active{
+            transform: translate(-25px,-25px);;
+        }
+        ul.no-bullets{
+            list-style-type: none;
+            padding: 0;
+            li{
+                margin-bottom: 40px;
+             
+                a{
+                    font-weight: 500;
+                    color: @text-grey;
+                    margin-right: 25px;
+                }
+               
+            }
+        }
+    }
+    i.menu-icon{
+        font-size: 2rem;
+    }
+    button.toggle{
+     span{
+        display: block;
+        width: 23px;
+        height: 2px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #24334a;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 2px 0px;
+        transition: all 0.5s ease-in;
+
+        &:first-child{
+            transform-origin: 0% 0%;
+        }
+        &:nth-last-child(1){
+            transform-origin: 0% 100%;
+        }
+}
+    }
+    button.active{
+        span{
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+            &:nth-last-child(2)
+            {
+              opacity: 0;
+              transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            &:nth-last-child(1)
+            {
+              transform: rotate(-45deg) translate(0, -1px);
+            }
+          }
+         
+    }
+
+}
+
+
+@media (min-width: 1000px) {  // bigger than tablet or mobile
+
+    header{
+        padding: 25px 120px;
+        nav{
+            position: initial;
+            display: flex;
+            width: auto;
+            height: auto;
+            padding: 0px;
+            background: transparent;
+            transform: none;
+            transition: none;
+           ul.no-bullets{
+               display: flex;
+               li{
+                   margin-bottom: 0;
+                   border-bottom: none;
+               }
+               
+           }
+        }
+        button.btn-transparent{
+            display: none;
+        }
+    }
+  }

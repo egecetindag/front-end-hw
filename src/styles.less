@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@text-grey: #949494;
+@title-dark-grey:#3f3f40;
+body{
+    font-family: 'Inter',sans-serif;
+    margin:0;
+    background-color: #ecf1f2;
+}
+h1{
+    color: @title-dark-grey;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0px;
+}
+h2{
+    color: @title-dark-grey;
+    margin: 0px;
+    font-weight: 300;
+}
+h3{
+    margin: 0px;
+}
+.text{
+    color:#7f7f7f;
+    font-size: 0.85rem;
+}
+button.btn-transparent{
+    background: transparent;
+    border: none;
+}
+select{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: @text-grey;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    &:focus, &:focus-visible{
+        outline: none;
+    }
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+@media (min-width: 1000px) { 
+    h1{
+        font-size: 3rem;
+    }
+}
+// .mt-1{
+//     margin-top: 1rem;
+// }
+// .mb-1{
+//     margin-bottom: 1rem;
+// }
+// .ml-1{
+//     margin-left: 1rem;
+// }
+// .mr-1{
+//     margin-right: 1rem;
+// }

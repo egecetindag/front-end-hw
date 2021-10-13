@@ -1,0 +1,30 @@
+@text-blue:#4984ef;
+
+.advantage-item{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    margin-bottom: 20px;
+    min-width: 200px;
+  
+    h3{
+        font-weight: 500;
+        color:@text-blue;
+    }
+    .text-wrapper{
+        display: flex;
+       flex-direction: column;
+       gap: 10px;
+    }
+}
+@media (min-width: 500px) { 
+    .advantage-item{
+        gap:80px;
+        min-width: 360px;
+    }
+}
+@media (min-width: 1000px) { 
+    .advantage-item{
+        gap:80px;
+    }
+}

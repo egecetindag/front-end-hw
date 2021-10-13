@@ -1,0 +1,44 @@
+@text-blue:#4984ef;
+section.account{
+    background-color: #fafafa;
+    max-width: 1330px;
+    margin: auto;
+    padding: 100px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    border-bottom: 1px solid rgba(183, 198, 225, 0.43);
+    .section-right{
+        img{
+            width: 100%;
+        }
+    }
+    .section-left{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        flex-grow: 1;
+        .color{
+            color:@text-blue;
+        }
+      
+    }
+}
+
+@media (min-width: 1000px) { 
+    section.account{
+        padding: 150px 0px 0px 120px;
+        gap: 20;
+        .section-left{
+            flex-grow: inherit;
+            width: 40%;
+            align-items: flex-start;
+        }
+        .section-right{
+            width: 60%;
+           
+        }
+    }
+  
+}
